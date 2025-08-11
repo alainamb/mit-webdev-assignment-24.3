@@ -12,6 +12,6 @@ describe('Hello World App', () => {
   test('should fail initially for screenshot purposes', async () => {
     const response = await request(app).get('/');
     // Change this expectation to make it fail initially
-    expect(response.text).toBe('Hello World FAIL');
+    expect(response.text).toBe('Hello World');
   });
 });
