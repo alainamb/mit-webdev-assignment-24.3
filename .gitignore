@@ -1,5 +1,6 @@
 # Dependencies
 node_modules/
+*.local
 
 # Environment variables
 .env
@@ -11,8 +12,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # Firebase deployment workflow (remove this line when ready for Section 2)
-.github/workflows/firebase-deploy.yml
+# .github/workflows/firebase-deploy.yml
 
 # Firebase files (uncomment when setting up Firebase)
-# .firebase/
-# firebase-debug.log
+.firebase/
+firebase-debug.log
