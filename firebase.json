@@ -1,4 +1,8 @@
 {
+  "functions": {
+    "source": ".",
+    "runtime": "nodejs20"
+  },
   "hosting": {
     "public": "public",
     "ignore": [
@@ -12,19 +16,5 @@
         "function": "app"
       }
     ]
-  },
-  "functions": [
-    {
-      "source": ".",
-      "runtime": "nodejs20",
-      "codebase": "default",
-      "ignore": [
-        "node_modules",
-        ".git",
-        "firebase-debug.log",
-        "firebase-debug.*.log",
-        "*.local"
-      ]
-    }
-  ]
+  }
 }

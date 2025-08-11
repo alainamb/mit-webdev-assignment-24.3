@@ -1,3 +1,4 @@
+
 name: Build and Deploy to Firebase
 
 on:
@@ -23,10 +24,8 @@ jobs:
         run: npm test
         
       - name: Deploy to Firebase
-        env:
-          GOOGLE_APPLICATION_CREDENTIALS_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}
-        run: |
-          echo '${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}' > service-account-key.json
-          export GOOGLE_APPLICATION_CREDENTIALS=./service-account-key.json
-          npm install -g firebase-tools
-          firebase deploy --only functions --project mit-webdev-assignment-24-3
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}'
+          projectId: mit-webdev-assignment-24-3
